@@ -1,0 +1,277 @@
+/* Quitamos los espacios que vienen por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Toda la página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #f8b6d2, #e8c7ff);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* Tarjeta */
+.tarjeta {
+    width: 500px;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+    padding: 50px 40px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+
+    animation: aparecer 1s ease;
+}
+
+/* Texto pequeño */
+.pequeno {
+    color: #a45b78;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+/* Título */
+h1 {
+    color: #d6336c;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+/* Línea */
+.linea {
+    width: 80px;
+    height: 4px;
+
+    background-color: #f28bb2;
+
+    border-radius: 10px;
+
+    margin: 0 auto 30px;
+}
+
+/* Mensajes */
+.mensaje {
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+/* Texto fuerte */
+.mensaje strong {
+    color: #d6336c;
+}
+
+/* Corazón grande */
+.corazon-grande {
+    font-size: 70px;
+
+    margin: 20px 0;
+
+    animation: latido 1.3s infinite;
+}
+
+/* Texto final */
+.final {
+    color: #777;
+
+    font-size: 16px;
+
+    margin-bottom: 8px;
+}
+
+/* Segundo título */
+h2 {
+    color: #d6336c;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+/* Botón */
+button {
+    border: none;
+
+    background-color: #d6336c;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 8px 20px rgba(214, 51, 108, 0.3);
+}
+
+/* Efecto cuando pasas el mouse */
+button:hover {
+    background-color: #b92759;
+
+    transform: scale(1.08);
+
+    box-shadow: 0 12px 25px rgba(214, 51, 108, 0.4);
+}
+
+/* Firma */
+.firma {
+    margin-top: 30px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+/* Corazones flotantes */
+.corazon {
+    position: fixed;
+
+    font-size: 35px;
+
+    opacity: 0.6;
+
+    animation: flotar 5s infinite ease-in-out;
+}
+
+/* Posiciones */
+.corazon1 {
+    left: 10%;
+    top: 20%;
+}
+
+.corazon2 {
+    right: 12%;
+    top: 15%;
+
+    animation-delay: 1s;
+}
+
+.corazon3 {
+    left: 15%;
+    bottom: 15%;
+
+    animation-delay: 2s;
+}
+
+.corazon4 {
+    right: 15%;
+    bottom: 20%;
+
+    animation-delay: 3s;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Animación del corazón */
+@keyframes latido {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* Animación corazones */
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/* Adaptación para celular */
+@media (max-width: 600px) {
+
+    .tarjeta {
+        width: 100%;
+
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .mensaje {
+        font-size: 15px;
+    }
+
+    .corazon {
+        font-size: 25px;
+    }
+
+}
